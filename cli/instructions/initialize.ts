@@ -4,7 +4,7 @@ import * as borsh from "@coral-xyz/borsh" // eslint-disable-line @typescript-esl
 import { PROGRAM_ID } from "../programId"
 
 export interface InitializeArgs {
-  fee: number
+  fee: number 
 }
 
 export interface InitializeAccounts {
@@ -13,7 +13,7 @@ export interface InitializeAccounts {
   globalAccount: PublicKey
   admin: PublicKey
   rent: PublicKey
-  systemProgram: PublicKey
+  systemProgram: PublicKey 
 }
 
 export const layout = borsh.struct([borsh.f64("fee")])
@@ -21,7 +21,7 @@ export const layout = borsh.struct([borsh.f64("fee")])
 export function initialize(
   args: InitializeArgs,
   accounts: InitializeAccounts,
-  programId: PublicKey = PROGRAM_ID
+  programId: PublicKey = PROGRAM_ID 
 ) {
   const keys: Array<AccountMeta> = [
     {
